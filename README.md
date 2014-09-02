@@ -1,7 +1,7 @@
 html2image
 ==========
 
-migration from https://code.google.com/p/java-html2image/
+migration from https://code.google.com/p/java-html2image/ by Yoav Aharoni
 
 This simple Java library converts plain HTML markup to image and provides client-side image-map using HTML <map> element.
 
