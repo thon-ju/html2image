@@ -4,8 +4,6 @@ import gui.ava.html.imagemap.HtmlImageMap;
 import gui.ava.html.imagemap.HtmlImageMapImpl;
 import gui.ava.html.parser.HtmlParser;
 import gui.ava.html.parser.HtmlParserImpl;
-import gui.ava.html.pdf.PdfRenderer;
-import gui.ava.html.pdf.PdfRendererImpl;
 import gui.ava.html.renderer.ImageRenderer;
 import gui.ava.html.renderer.ImageRendererImpl;
 import org.w3c.dom.Document;
@@ -23,7 +21,6 @@ public class Html2Image {
 	private HtmlParser parser = new HtmlParserImpl();
 	private HtmlImageMap htmlImageMap;
 	private ImageRenderer imageRenderer;
-	private PdfRenderer pdfRenderer;
 
 	public HtmlParser getParser() {
 		return parser;
@@ -34,13 +31,6 @@ public class Html2Image {
 			htmlImageMap = new HtmlImageMapImpl(getImageRenderer());
 		}
 		return htmlImageMap;
-	}
-
-	public PdfRenderer getPdfRenderer() {
-		if (pdfRenderer == null) {
-			pdfRenderer = new PdfRendererImpl(parser);
-		}
-		return pdfRenderer;
 	}
 
 	public ImageRenderer getImageRenderer() {
